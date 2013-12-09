@@ -1,6 +1,7 @@
 define resource_vcsh($url) {
-    exec { $name:
-        path    => '/usr/bin',
+    exec { "vcsh ${name}":
+        path => '/usr/bin',
+        user => $role::user,
         # FIXME: We shall not clone vcsh if it is present.
         command => "vcsh clone ${url} ${name}; true",
         require => Package['vcsh'],
