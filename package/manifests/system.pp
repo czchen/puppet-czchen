@@ -11,6 +11,7 @@ class package::system {
         'manpages',
         'npm',
         'p7zip-full',
+        'puppet',
         'python-pip',
         'ruby',
         'sudo',
