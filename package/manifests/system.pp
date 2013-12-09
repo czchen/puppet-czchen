@@ -28,9 +28,10 @@ class package::system {
         'mutt-patched',
     ]
 
-    case $operatingsystem {
-        Debian: { $package = $debian }
-        Ubuntu: { $package = $ubuntu }
+    $package = $operatingsystem ? {
+        Debian  => $debian,
+        Ubuntu  => $ubuntu,
+        default => [],
     }
 
     package { $package:
