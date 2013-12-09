@@ -1,3 +1,5 @@
+env: FACTER_ROLE=travis
+
 before_install:
     -   sudo apt-get update -qq
     -   sudo apt-get install -q puppet
