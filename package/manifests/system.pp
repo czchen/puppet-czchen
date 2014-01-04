@@ -1,5 +1,6 @@
 class package::system {
     $debian = [
+        'apt-file',
         'autoconf',
         'automake',
         'autojump',
