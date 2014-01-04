@@ -9,6 +9,7 @@ class package::system {
         'gufw',
         'ibus-chewing',
         'manpages',
+        'mutt-patched',
         'npm',
         'p7zip-full',
         'puppet',
@@ -27,7 +28,6 @@ class package::system {
         'manpages-dev',
         'manpages-posix',
         'manpages-posix-dev',
-        'mutt-patched',
     ]
 
     $package = $operatingsystem ? {
