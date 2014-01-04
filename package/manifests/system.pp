@@ -2,8 +2,8 @@ class package::system {
     $debian = [
         'apt-file',
         'autoconf',
-        'automake',
         'autojump',
+        'automake',
         'build-essential',
         'cmake',
         'debhelper',
@@ -20,6 +20,7 @@ class package::system {
         'python-pip',
         'ruby',
         'sudo',
+        'texinfo',
         'tmux',
         'tree',
         'valgrind',
