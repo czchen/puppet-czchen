@@ -15,6 +15,7 @@ class package::system {
         'python-pip',
         'ruby',
         'sudo',
+        'tmux',
         'tree',
         'vcsh',
         'vim-gnome',
