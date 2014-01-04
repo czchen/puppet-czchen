@@ -18,6 +18,7 @@ class package::system {
         'sudo',
         'tmux',
         'tree',
+        'valgrind',
         'vcsh',
         'vim-gnome',
         'zsh',
