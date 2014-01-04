@@ -1,5 +1,7 @@
 class package::system {
     $debian = [
+        'autoconf',
+        'automake',
         'autojump',
         'build-essential',
         'cmake',
@@ -8,6 +10,7 @@ class package::system {
         'git',
         'gufw',
         'ibus-chewing',
+        'libtool',
         'manpages',
         'mutt-patched',
         'npm',
