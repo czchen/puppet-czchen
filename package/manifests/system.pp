@@ -4,6 +4,7 @@ class package::system {
         'apt-file',
         'debhelper',
         'devscripts',
+        'dh-autoreconf',
 
         # development
         'autoconf',
