@@ -1,17 +1,24 @@
 class package::system {
     $debian = [
+        # debian
         'apt-file',
+        'debhelper',
+        'devscripts',
+
+        # development
         'autoconf',
-        'autojump',
         'automake',
         'build-essential',
         'cmake',
-        'debhelper',
-        'devscripts',
         'git',
+        'libtool',
+        'texinfo',
+        'valgrind',
+
+        # miscellaneous
+        'autojump',
         'gufw',
         'ibus-chewing',
-        'libtool',
         'manpages',
         'mutt-patched',
         'npm',
@@ -20,10 +27,8 @@ class package::system {
         'python-pip',
         'ruby',
         'sudo',
-        'texinfo',
         'tmux',
         'tree',
-        'valgrind',
         'vcsh',
         'vim-gnome',
         'zsh',
