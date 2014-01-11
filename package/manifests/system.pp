@@ -1,5 +1,5 @@
 class package::system {
-    $debian = [
+    $debbase = [
         # debian
         'apt-file',
         'debhelper',
@@ -15,6 +15,12 @@ class package::system {
         'libtool',
         'texinfo',
         'valgrind',
+
+        # desktop
+        'keepassx',
+        'plasma-desktop',
+        'playonlinux',
+        'yakuake',
 
         # miscellaneous
         'autojump',
@@ -35,8 +41,13 @@ class package::system {
         'zsh',
     ]
 
+    $debian = [
+        $debbase,
+        'fonts-arphic-uming',
+    ]
+
     $ubuntu = [
-        $debian,
+        $debbase,
         'manpages-dev',
         'manpages-posix',
         'manpages-posix-dev',
