@@ -5,6 +5,8 @@ class package::system {
         'debhelper',
         'devscripts',
         'dh-autoreconf',
+        'dh-make',
+        'quilt',
 
         # development
         'autoconf',
@@ -13,7 +15,9 @@ class package::system {
         'cmake',
         'git',
         'libtool',
+        'pinfo',
         'texinfo',
+        'tig',
         'valgrind',
 
         # miscellaneous
