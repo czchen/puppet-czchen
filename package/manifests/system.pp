@@ -1,4 +1,5 @@
 class package::system {
+    include package::apt
     include package::sudo
 
     $default = [
