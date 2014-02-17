@@ -1,62 +1,81 @@
 class package::system {
-    $debbase = [
+    include package::apt
+    include package::sudo
+
+    $default = [
+        # development
+        'git',
+
+        # miscellaneous
+        'ibus-chewing',
+        'puppet',
+        'tmux',
+        'zsh',
+    ]
+
+    $debian = [
+        $default,
+
         # debian
         'apt-file',
         'debhelper',
         'devscripts',
         'dh-autoreconf',
+        'dh-make',
+        'git-buildpackage',
+        'quilt',
 
         # development
         'autoconf',
         'automake',
         'build-essential',
         'cmake',
-        'git',
         'libtool',
+        'pinfo',
         'texinfo',
+        'tig',
         'valgrind',
 
         # desktop
         'keepassx',
         'plasma-desktop',
         'playonlinux',
-        'yakuake',
 
         # miscellaneous
         'autojump',
+        'fonts-arphic-uming',
         'gufw',
-        'ibus-chewing',
         'manpages',
         'mutt-patched',
         'npm',
         'p7zip-full',
-        'puppet',
         'python-pip',
         'ruby',
-        'sudo',
-        'tmux',
         'tree',
-        'vcsh',
         'vim-gnome',
-        'zsh',
-    ]
-
-    $debian = [
-        $debbase,
-        'fonts-arphic-uming',
     ]
 
     $ubuntu = [
-        $debbase,
+        $debian,
         'manpages-dev',
         'manpages-posix',
         'manpages-posix-dev',
     ]
 
+    $fedora = [
+        $default,
+
+        # development
+        'gcc',
+        'kernel-devel',
+        'kernel-headers',
+    ]
+
     $package = $operatingsystem ? {
         Debian  => $debian,
         Ubuntu  => $ubuntu,
-        default => [],
+        Fedora  => $fedora,
+        default => $default,
     }
 
     package { $package:

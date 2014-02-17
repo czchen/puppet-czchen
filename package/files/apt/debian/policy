@@ -1,0 +1,7 @@
+Package: *
+Pin: origin "ppa.launchpad.net"
+Pin-Priority: 900
+
+Package: *
+Pin: release a=testing
+Pin-Priority: 800
