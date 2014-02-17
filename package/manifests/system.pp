@@ -56,6 +56,11 @@ class package::system {
 
     $fedora = [
         $default,
+
+        # development
+        'gcc',
+        'kernel-devel',
+        'kernel-headers',
     ]
 
     $package = $operatingsystem ? {
