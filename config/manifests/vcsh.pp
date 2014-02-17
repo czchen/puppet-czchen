@@ -1,12 +1,12 @@
 define resource_vcsh($url) {
     exec { "vcsh ${name}":
-        path => '/usr/bin',
-        user => $role::user,
-        command => "vcsh clone ${url} ${name}",
+        path        => '/bin:/usr/bin',
+        user        => $role::user,
+        command     => "vcsh clone ${url} ${name}",
         environment => [
             "HOME=${role::home}",
         ],
-        onlyif => "test -n \"`vcsh status ${name} 2>&1`\"",
+        onlyif => "vcsh status ${name} 2>&1|grep 'no repository found for'",
         require => Package['vcsh'],
     }
 }
