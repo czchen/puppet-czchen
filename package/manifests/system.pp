@@ -18,6 +18,7 @@ class package::system {
 
         # debian
         'apt-file',
+        'apt-listchanged',
         'debhelper',
         'devscripts',
         'dh-autoreconf',
