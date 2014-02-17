@@ -22,6 +22,7 @@ class package::system {
         'devscripts',
         'dh-autoreconf',
         'dh-make',
+        'git-buildpackage',
         'quilt',
 
         # development
