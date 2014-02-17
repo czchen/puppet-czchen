@@ -1,5 +1,5 @@
 class role {
-    case $factor_role {
+    case $role {
         travis : {
             include role::travis
             $user  = $role::travis::user
