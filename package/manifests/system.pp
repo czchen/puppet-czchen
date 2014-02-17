@@ -1,5 +1,5 @@
 class package::system {
-    include package::apt
+    if $role != travis { include package::apt }
     include package::sudo
 
     $default = [
