@@ -34,14 +34,16 @@ class package::apt::ubuntu {
     $codename = $lsbdistcodename
     $mirror   = 'archive.ubuntu.com'
 
-    file { 'sources.list':
-        path    => '/etc/apt/sources.list',
-        owner   => 'root',
-        group   => 'root',
-        mode    => '0644',
-        ensure  => file,
-        require => Package['apt'],
-        content => template('package/apt/ubuntu/sources.list.erb'),
+    if $role != travis {
+        file { 'sources.list':
+            path    => '/etc/apt/sources.list',
+            owner   => 'root',
+            group   => 'root',
+            mode    => '0644',
+            ensure  => file,
+            require => Package['apt'],
+            content => template('package/apt/ubuntu/sources.list.erb'),
+        }
     }
 }
 
