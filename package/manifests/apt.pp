@@ -3,6 +3,8 @@ class package::apt::debian {
         ensure => installed
     }
 
+    $mirror = 'http.debian.net'
+
     file { 'sources.list':
         path    => '/etc/apt/sources.list',
         owner   => 'root',
@@ -10,7 +12,7 @@ class package::apt::debian {
         mode    => '0644',
         ensure  => file,
         require => Package['apt'],
-        source  => 'puppet:///modules/package/apt/debian/sources.list',
+        content => template('package/apt/debian/sources.list.erb'),
     }
 
     file { 'policy':
@@ -20,7 +22,7 @@ class package::apt::debian {
         mode    => '0644',
         ensure  => file,
         require => Package['apt'],
-        source  => 'puppet:///modules/package/apt/debian/sources.list',
+        source  => 'puppet:///modules/package/apt/debian/policy',
     }
 }
 
