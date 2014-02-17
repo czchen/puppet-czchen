@@ -1,5 +1,20 @@
 class package::system {
+    include package::sudo
+
+    $default = [
+        # development
+        'git',
+
+        # miscellaneous
+        'ibus-chewing',
+        'puppet',
+        'tmux',
+        'zsh',
+    ]
+
     $debian = [
+        $default,
+
         # debian
         'apt-file',
         'debhelper',
@@ -13,7 +28,6 @@ class package::system {
         'automake',
         'build-essential',
         'cmake',
-        'git',
         'libtool',
         'pinfo',
         'texinfo',
@@ -23,20 +37,14 @@ class package::system {
         # miscellaneous
         'autojump',
         'gufw',
-        'ibus-chewing',
         'manpages',
         'mutt-patched',
         'npm',
         'p7zip-full',
-        'puppet',
         'python-pip',
         'ruby',
-        'sudo',
-        'tmux',
         'tree',
-        'vcsh',
         'vim-gnome',
-        'zsh',
     ]
 
     $ubuntu = [
@@ -46,10 +54,15 @@ class package::system {
         'manpages-posix-dev',
     ]
 
+    $fedora = [
+        $default,
+    ]
+
     $package = $operatingsystem ? {
         Debian  => $debian,
         Ubuntu  => $ubuntu,
-        default => [],
+        Fedora  => $fedora,
+        default => $default,
     }
 
     package { $package:
