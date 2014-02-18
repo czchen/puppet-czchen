@@ -6,8 +6,8 @@ define resource_vcsh($url) {
         environment => [
             "HOME=${role::home}",
         ],
-        onlyif => "vcsh status ${name} 2>&1|grep 'no repository found for'",
-        require => Package['vcsh'],
+        onlyif      => "vcsh status ${name} 2>&1|grep 'no repository found for'",
+        require     => Package['vcsh'],
     }
 }
 
