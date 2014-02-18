@@ -1,8 +1,7 @@
-env: FACTER_ROLE=travis
-
 before_install:
     -   sudo apt-get update -qq
-    -   sudo apt-get install -q puppet
+    -   sudo apt-get install rubygems
+    -   sudo gem install puppet
 
 script:
-    -   sudo ./deploy
+    -   sudo FACTER_ROLE=travis ./deploy
