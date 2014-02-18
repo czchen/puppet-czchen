@@ -49,7 +49,6 @@ class package::system {
         'manpages',
         'mutt-patched',
         'p7zip-full',
-        'python-pip',
         'ruby',
         'tree',
         'vim-gnome',
