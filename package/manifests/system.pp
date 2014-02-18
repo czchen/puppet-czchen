@@ -48,7 +48,6 @@ class package::system {
         'gufw',
         'manpages',
         'mutt-patched',
-        'npm',
         'p7zip-full',
         'python-pip',
         'ruby',
