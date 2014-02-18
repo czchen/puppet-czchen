@@ -1,19 +1,19 @@
 class role {
     case $role {
         travis : {
-            include role::travis
-            $user  = $role::travis::user
-            $group = $role::travis::group
-            $home  = $role::travis::home
-            $shell = $role::travis::shell
+            $user  = 'travis'
+            $home  = "/home/${user}/fake_home"
+            $shell = '/bin/bash'
         }
 
         default : {
-            include role::czchen
-            $user  = $role::czchen::user
-            $group = $role::czchen::group
-            $home  = $role::czchen::home
-            $shell = $role::czchen::shell
+            $user  = 'czchen'
+            $home  = "/home/${user}"
+            $shell = '/bin/zsh'
         }
     }
+
+    $group = $user
+    $umask = 0022
+    $path  = '/usr/local/bin:/usr/bin:/bin'
 }
