@@ -14,6 +14,6 @@ class role {
     }
 
     $group = $user
-    $umask = 0022
+    $umask = 077
     $path  = '/usr/local/bin:/usr/bin:/bin'
 }
