@@ -12,7 +12,7 @@ class package::config::apt::debian {
         mode    => '0644',
         ensure  => file,
         require => Package['apt'],
-        content => template('package/apt/debian/sources.list.erb'),
+        content => template('package/apt/sources.list.debian.erb'),
     }
 
     file { 'policy':
@@ -22,7 +22,7 @@ class package::config::apt::debian {
         mode    => '0644',
         ensure  => file,
         require => Package['apt'],
-        source  => 'puppet:///modules/package/apt/debian/policy',
+        source  => 'puppet:///modules/package/apt/policy.debian',
     }
 }
 
@@ -41,7 +41,7 @@ class package::config::apt::ubuntu {
         mode    => '0644',
         ensure  => file,
         require => Package['apt'],
-        content => template('package/apt/ubuntu/sources.list.erb'),
+        content => template('package/apt/sources.list.ubuntu.erb'),
     }
 }
 
