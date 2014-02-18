@@ -5,7 +5,6 @@ define npm($ensure = installed) {
                 path    => $role::path,
                 user    => $role::user,
                 group   => $role::group,
-                # FIXME: umask does not work here. Why?
                 umask   => $role::umask,
                 require => Package['npm'],
             }
@@ -16,7 +15,6 @@ define npm($ensure = installed) {
                 path    => $role::path,
                 user    => $role::user,
                 group   => $role::group,
-                # FIXME: umask does not work here. Why?
                 umask   => $role::umask,
                 require => Package['npm'],
             }
