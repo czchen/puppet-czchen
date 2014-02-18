@@ -10,7 +10,7 @@ define sudo_config() {
     }
 }
 
-class package::sudo {
+class package::config::sudo {
     package { 'sudo':
         ensure => installed,
     }

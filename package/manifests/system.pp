@@ -1,6 +1,6 @@
 class package::system {
-    if $role != travis { include package::apt }
-    include package::sudo
+    if $role != travis { include package::config::apt }
+    include package::config::sudo
 
     $default = [
         # development

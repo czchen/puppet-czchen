@@ -1,4 +1,4 @@
-class package::apt::debian {
+class package::config::apt::debian {
     package { 'apt':
         ensure => installed
     }
@@ -26,7 +26,7 @@ class package::apt::debian {
     }
 }
 
-class package::apt::ubuntu {
+class package::config::apt::ubuntu {
     package { 'apt':
         ensure => installed
     }
@@ -45,10 +45,10 @@ class package::apt::ubuntu {
     }
 }
 
-class package::apt {
+class package::config::apt {
     case $operatingsystem {
-        Debian: { include package::apt::debian }
-        Ubuntu: { include package::apt::ubuntu }
+        Debian: { include package::config::apt::debian }
+        Ubuntu: { include package::config::apt::ubuntu }
         default: {}
     }
 }
