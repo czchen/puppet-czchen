@@ -9,13 +9,14 @@ define npm($ensure = installed) {
                 environment => [
                     "HOME=${role::home}",
                 ],
-                onlyif      => "npm list -g ${name}|grep '(empty)'",
+                unless      => "npm list -g ${name}|grep ${name}@",
                 require     => Package[$package::npm::npm],
             }
         }
 
         default: {
-            exec { "npm install -g --prefix ${role::home}/.local ${name}@${ensure}":
+            $version = $ensure
+            exec { "npm install -g --prefix ${role::home}/.local ${name}@${version}":
                 path        => $role::path,
                 user        => $role::user,
                 group       => $role::group,
@@ -23,9 +24,8 @@ define npm($ensure = installed) {
                 environment => [
                     "HOME=${role::home}",
                 ],
-                onlyif      => "npm list -g ${name}|grep '(empty)'",
+                unless      => "npm list -g ${name}|grep ${name}@${version}",
                 require     => Package[$package::npm::npm],
-
             }
         }
     }
