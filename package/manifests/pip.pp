@@ -9,7 +9,7 @@ define pip($ensure = installed) {
                 environment => [
                     "HOME=${role::home}",
                 ],
-                unless      => "pip list --local|grep  ^${name} ('",
+                unless      => "pip list --local|grep  '^${name} ('",
                 require     => Package[$package::pip::pip],
             }
         }
