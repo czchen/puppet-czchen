@@ -32,8 +32,11 @@ define gem($ensure = installed) {
 }
 
 class package::gem {
-    $gem = 'ruby1.9.1'
-    if $role == travis { $gem = 'rubygems' }
+    if $role == travis {
+        $gem = 'rubygems'
+    } else {
+        $gem = 'ruby1.9.1'
+    }
 
     package {$gem:
         ensure => installed
