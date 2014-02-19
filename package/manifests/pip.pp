@@ -9,7 +9,22 @@ define pip($ensure = installed) {
                 environment => [
                     "HOME=${role::home}",
                 ],
-                unless      => "pip list --local|grep ^${name}",
+                unless      => "pip list --local|grep  ^${name} ('",
+                require     => Package[$package::pip::pip],
+            }
+        }
+
+        default: {
+            $version = $ensure
+            exec { "pip install --user --force-reinstall ${name}==${version}":
+                path        => $role::path,
+                user        => $role::user,
+                group       => $role::group,
+                umask       => $role::umask,
+                environment => [
+                    "HOME=${role::home}",
+                ],
+                unless      => "pip list --local|grep '^${name} (${version})'",
                 require     => Package[$package::pip::pip],
             }
         }
