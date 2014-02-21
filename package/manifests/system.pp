@@ -19,12 +19,14 @@ class package::system {
         # debian
         'apt-file',
         'apt-listchanges',
+        'autopkgtest',
         'debhelper',
         'devscripts',
         'dh-autoreconf',
         'dh-make',
         'git-buildpackage',
         'quilt',
+        'ubuntu-dev-tools',
 
         # development
         'autoconf',
