@@ -33,6 +33,7 @@ class package::system {
         'automake',
         'build-essential',
         'cmake',
+        'exuberant-ctags',
         'libtool',
         'pinfo',
         'texinfo',
