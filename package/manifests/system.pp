@@ -34,6 +34,7 @@ class package::system {
         'build-essential',
         'cmake',
         'exuberant-ctags',
+        'ghc',
         'libtool',
         'pinfo',
         'texinfo',
