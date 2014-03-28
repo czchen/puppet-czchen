@@ -38,6 +38,7 @@ class package::npm {
     }
 
     $package = [
+        'fuck-you',
         'n',
         'LiveScript',
         'ydict.js',
