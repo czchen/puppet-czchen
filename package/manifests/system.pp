@@ -42,6 +42,7 @@ class package::system {
         'texinfo',
         'tig',
         'valgrind',
+        'virt-manager',
 
         # desktop
         'keepassx',
