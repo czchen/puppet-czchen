@@ -2,6 +2,8 @@ class package::system {
     if $role != travis { include package::config::apt }
     include package::config::sudo
 
+    include package::config::group
+
     $default = [
         # development
         'git',
