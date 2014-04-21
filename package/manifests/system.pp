@@ -46,7 +46,6 @@ class package::system {
 
         # desktop
         'keepassx',
-        'plasma-desktop',
         'playonlinux',
 
         # miscellaneous
