@@ -59,6 +59,7 @@ class package::system {
         'ruby',
         'tree',
         'vim-gnome',
+        'zsh-antigen',
     ]
 
     $ubuntu = [
