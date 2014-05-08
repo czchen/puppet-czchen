@@ -18,6 +18,10 @@ class package::system {
     $debian = [
         $default,
 
+        # development
+        'manpages-posix',
+        'manpages-posix-dev',
+
         # debian
         'apt-file',
         'apt-listchanges',
@@ -69,8 +73,6 @@ class package::system {
     $ubuntu = [
         $debian,
         'manpages-dev',
-        'manpages-posix',
-        'manpages-posix-dev',
     ]
 
     $fedora = [
