@@ -48,6 +48,11 @@ class package::system {
         'keepassx',
         'playonlinux',
 
+        # selinux
+        'auditd',
+        'selinux-basics',
+        'selinux-policy-default',
+
         # miscellaneous
         'autojump',
         'fonts-arphic-uming',
