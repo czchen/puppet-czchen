@@ -53,6 +53,7 @@ class package::system {
         'virt-manager',
 
         # desktop
+        'font-manager',
         'keepassx',
         'playonlinux',
 
