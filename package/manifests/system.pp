@@ -55,9 +55,13 @@ class package::system {
         'virt-manager',
 
         # desktop
-        'font-manager',
         'keepassx',
         'playonlinux',
+
+        # fonts
+        'font-manager',
+        'fonts-droid',
+        'fonts-noto',
 
         # selinux
         'auditd',
@@ -66,7 +70,6 @@ class package::system {
 
         # miscellaneous
         'autojump',
-        'fonts-arphic-uming',
         'gufw',
         'mutt-patched',
         'p7zip-full',
