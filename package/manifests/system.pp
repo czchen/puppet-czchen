@@ -69,7 +69,6 @@ class package::system {
         'manpages',
         'mutt-patched',
         'p7zip-full',
-        'ruby',
         'tree',
         'vim-gnome',
         'zsh-antigen',

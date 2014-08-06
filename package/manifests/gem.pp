@@ -35,7 +35,7 @@ class package::gem {
     if $role == travis {
         $gem = 'rubygems'
     } else {
-        $gem = 'ruby1.9.1'
+        $gem = 'ruby'
     }
 
     package {$gem:
