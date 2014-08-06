@@ -18,10 +18,6 @@ class package::system {
     $debian = [
         $default,
 
-        # development
-        'manpages-posix',
-        'manpages-posix-dev',
-
         # debian
         'apt-file',
         'apt-listchanges',
@@ -43,9 +39,15 @@ class package::system {
         'docker.io',
         'exuberant-ctags',
         'ghc',
+        'glibc-doc',
+        'glibc-doc-reference',
         'libghc-hspec-dev',
         'libtool',
         'lxc',
+        'manpages',
+        'manpages-dev',
+        'manpages-posix',
+        'manpages-posix-dev',
         'pinfo',
         'texinfo',
         'tig',
@@ -66,7 +68,6 @@ class package::system {
         'autojump',
         'fonts-arphic-uming',
         'gufw',
-        'manpages',
         'mutt-patched',
         'p7zip-full',
         'tree',
@@ -76,7 +77,6 @@ class package::system {
 
     $ubuntu = [
         $debian,
-        'manpages-dev',
     ]
 
     $fedora = [
