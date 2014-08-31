@@ -70,6 +70,10 @@ class package::system {
         'fonts-droid',
         'fonts-noto',
 
+        # gpg key
+        'gnupg2',
+        'signing-party',
+
         # selinux
         'auditd',
         'selinux-basics',
