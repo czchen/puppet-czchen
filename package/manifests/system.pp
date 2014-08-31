@@ -40,6 +40,7 @@ class package::system {
         'docker.io',
         'dstat',
         'exuberant-ctags',
+        'freemind',
         'ghc',
         'glibc-doc',
         'glibc-doc-reference',
