@@ -46,6 +46,7 @@ class package::system {
         'glibc-doc-reference',
         'libghc-hspec-dev',
         'libtool',
+        'libvirt-bin',
         'lxc',
         'manpages',
         'manpages-dev',
