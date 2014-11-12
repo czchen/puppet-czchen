@@ -27,6 +27,7 @@ class package::system {
         'dh-autoreconf',
         'dh-make',
         'git-buildpackage',
+        'how-can-i-help',
         'quilt',
         'ubuntu-dev-tools',
 
