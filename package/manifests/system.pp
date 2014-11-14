@@ -18,6 +18,11 @@ class package::system {
     $debian = [
         $default,
 
+        # apparmor
+        'apparmor',
+        'apparmor-notify',
+        'apparmor-utils',
+
         # debian
         'apt-file',
         'apt-listchanges',
@@ -75,11 +80,6 @@ class package::system {
         # gpg key
         'gnupg2',
         'signing-party',
-
-        # selinux
-        'auditd',
-        'selinux-basics',
-        'selinux-policy-default',
 
         # miscellaneous
         'autojump',
