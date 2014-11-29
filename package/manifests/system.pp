@@ -28,6 +28,7 @@ class package::system {
         'apt-listchanges',
         'autopkgtest',
         'debhelper',
+        'debian-goodies',
         'devscripts',
         'dh-autoreconf',
         'dh-make',
