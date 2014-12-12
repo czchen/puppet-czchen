@@ -32,6 +32,7 @@ class package::system {
         'devscripts',
         'dh-autoreconf',
         'dh-make',
+        'dput-ng',
         'git-buildpackage',
         'how-can-i-help',
         'quilt',
