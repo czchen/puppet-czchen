@@ -26,6 +26,7 @@ class package::system {
         # debian
         'apt-file',
         'apt-listchanges',
+        'apt-transport-https',
         'autopkgtest',
         'debhelper',
         'debian-goodies',
